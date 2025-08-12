@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, ImageBackground, Image } from "react-native";
 import {Input} from '../components/input/input';
+import { Botao } from '../components/botao/botao';
 
 export default function Index() {
   return (
@@ -19,7 +20,10 @@ export default function Index() {
 
     {/* input  */}
     <Input/>
+
     {/* botao */}
+    <Botao tituloBotao='Consultar'/>
+
     {/*card de informacoes */}
     </View>
 
