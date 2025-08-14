@@ -1,6 +1,7 @@
-import { Text, View, StyleSheet, ImageBackground, Image } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Image, ScrollView } from "react-native";
 import {Input} from '../components/input/input';
 import { Botao } from '../components/botao/botao';
+import { Card } from '../components/card/card';
 
 export default function Index() {
   return (
@@ -14,7 +15,9 @@ export default function Index() {
     </ImageBackground>
 
     {/* campo de consulta */}
-    <View style={styles.container}>
+    <ScrollView style={styles.containerScroll}>
+      <View style={styles.container}>
+
     {/* titulo */}
     <Text style={styles.titulo}>Consulte seu CEP</Text>
 
@@ -25,7 +28,9 @@ export default function Index() {
     <Botao tituloBotao='Consultar'/>
 
     {/*card de informacoes */}
+    <Card/>
     </View>
+    </ScrollView>
 
     </>
   );
@@ -45,11 +50,17 @@ logo: {
   height: 120
 },
 container: {
-  flex: 1.5,
+  gap: 40,
+  width: "100%",
+  minHeight: "100%",
   alignItems: "center",
+  paddingBottom: 70
+},
+containerScroll: {
+  flex: 1.5,
   paddingTop: 50,
+  height: '100%',
   paddingBottom: 50,
-  gap: 40
 },
 titulo: {
   fontSize: 25
